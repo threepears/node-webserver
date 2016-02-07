@@ -1,0 +1,16 @@
+extends header
+
+block .container
+  h1 Contact
+    form(method='POST')
+      .form-group
+        label Name
+        input(type='text', name='name', placeholder='Abe Lincoln')
+      .form-group
+        label Email
+        input(type='email', name='email', placeholder='abe@wh.gov')
+      .form-group
+        label Message
+        textarea(name='message', placeholder='This site is awesome!')
+      .form-group
+        input(type='submit', value='Contact Us!')

@@ -1,0 +1,8 @@
+extends header
+
+block .container
+  h1 Send us photos of you enjoying cal.js
+
+  form(method='post', enctype='multipart/form-data')
+    input(type='file', name='image', accept='image/*,.html')
+    input(type='submit', value='Share your photo!')

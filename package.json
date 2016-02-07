@@ -1,0 +1,38 @@
+{
+  "name": "node-webserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "bower": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/threepears/node-webserver.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/threepears/node-webserver/issues"
+  },
+  "homepage": "https://github.com/threepears/node-webserver#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "cheerio": "^0.20.0",
+    "express": "^4.13.4",
+    "imgur": "^0.1.7",
+    "jade": "^1.11.0",
+    "lodash": "^4.2.1",
+    "multer": "^1.1.0",
+    "node-cal": "github:threepears/node-cal",
+    "node-sass-middleware": "0.8.0",
+    "request": "^2.69.0"
+  },
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "nodemon": "^1.8.1"
+  }
+}

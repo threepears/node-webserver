@@ -1,0 +1,9 @@
+extends header
+
+block .container
+  #topnav
+    i.fa.fa-calendar.fa-3x
+    h1 Welcome to my #{title}
+  #content
+    p The current year is now #{date.getFullYear()}
+  script(src='../vendor/jquery/dist/jquery.min.js')

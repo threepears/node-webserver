@@ -1,0 +1,22 @@
+{
+  "name": "node-webserver",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Michael Conrad <michael@threepears.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "https://github.com/threepears/node-webserver",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "public/vendor"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0"
+  }
+}
