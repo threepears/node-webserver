@@ -6,4 +6,7 @@ block .container
     h1 Welcome to my #{title}
   #content
     p The current year is now #{date.getFullYear()}
+    p Today's top news is 
+      a(href=news.url)= news.title
+    p And that's all the news that's fit to print!
   script(src='../vendor/jquery/dist/jquery.min.js')
