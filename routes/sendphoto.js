@@ -3,7 +3,7 @@
 const express = require('express');
 const router = express.Router();
 
-const ImgLink = require('./models/imagelink');
+const ImgLink = require('../models/imagelinks');
 
 const fs = require('fs');
 const multer = require('multer');
@@ -65,3 +65,5 @@ router.post('/sendphoto', upload.single('image'), (req, res) => {
 
   console.log(req.file.filename);
 });
+
+module.exports = router;

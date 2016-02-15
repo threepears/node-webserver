@@ -7,9 +7,8 @@ const request = require('request');
 const _ = require('lodash');
 const cheerio = require('cheerio');
 
-const News = require('./models/news');
-const AllCaps = require('./models/allcaps');
-
+const News = require('../models/news');
+const AllCaps = require('../models/allcaps');
 
 
 // API page with CORS header
@@ -30,7 +29,6 @@ router.post('/api', (req, res) => {
   //db.collection('allcaps').insertOne(obj, (tantrum, result) => {
     //if (tantrum) throw tantrum;
 
-    console.log(_caps);
     res.send(_caps);
   });
 });
@@ -121,7 +119,6 @@ router.get('/api/news', (req, res) => {
 });
 
 
-
 // Get Reddit page and change out links for Rick Rolls
 router.get('/api/reddit', (req, res) => {
   const url = "https://www.reddit.com/";
@@ -140,3 +137,5 @@ router.get('/api/reddit', (req, res) => {
     res.send($.html());
   });
 });
+
+module.exports = router;
