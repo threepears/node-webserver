@@ -10,7 +10,7 @@ const multer = require('multer');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, './tmp/uploads')
+      cb(null, 'tmp/uploads')
    },
     filename: function (req, file, cb) {
     const beforeDot = file.fieldname + '-' + Date.now();
@@ -34,7 +34,7 @@ router.get('/sendphoto', (req, res) => {
 
 
 router.post('/sendphoto', upload.single('image'), (req, res) => {
-  console.log(req.file)
+  console.log(req.file);
 
   imgur.uploadFile('./tmp/uploads/' + req.file.filename)
     .then(function (json) {
