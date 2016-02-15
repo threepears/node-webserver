@@ -10,7 +10,7 @@ const multer = require('multer');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'tmp/uploads')
+      cb(null, './tmp/uploads')
    },
     filename: function (req, file, cb) {
     const beforeDot = file.fieldname + '-' + Date.now();
@@ -36,7 +36,7 @@ router.get('/sendphoto', (req, res) => {
 router.post('/sendphoto', upload.single('image'), (req, res) => {
   console.log(req.file)
 
-  imgur.uploadFile('tmp/uploads/' + req.file.filename)
+  imgur.uploadFile('./tmp/uploads/' + req.file.filename)
     .then(function (json) {
         const obj = new ImgLink({ 'url': json.data.link });
 
@@ -53,7 +53,7 @@ router.post('/sendphoto', upload.single('image'), (req, res) => {
 
         });
 
-        fs.unlink('tmp/uploads/' + req.file.filename, (err) => {
+        fs.unlink('./tmp/uploads/' + req.file.filename, (err) => {
           if (err) throw err;
           console.log('successfully deleted ' + req.file.filename);
         });
