@@ -30,6 +30,8 @@ app.set('view engine', 'jade');
 
 app.locals.title = "Super Cool Calendar App";
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
@@ -89,5 +91,5 @@ mongoose.connection.on('open', () => {
 
 //let db;
 
-//app.use(express.static(path.join(__dirname, 'public')));
+
 
