@@ -1,6 +1,8 @@
 "use strict";
 
 const app = require("express")();
+const express = require("express");
+const path = require('path');
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 
@@ -76,7 +78,6 @@ mongoose.connection.on('open', () => {
 //const upload = multer({ storage: storage });
 
 //const imgur = require('imgur');
-//const path = require('path');
 //const request = require('request');
 //const _ = require('lodash');
 //const cheerio = require('cheerio');
